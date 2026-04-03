@@ -131,7 +131,7 @@ function App() {
               {castGone.includes(actor) && (
                 <img
                   // src={actor.overlayImage}
-                  src="/red-x.jpg"
+                  src="red-x.jpg"
                   alt={`${actor.name} overlay`}
                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 object-cover rounded-full"
                 />
