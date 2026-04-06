@@ -48,3 +48,20 @@ export const cast = [
     msg: '"Door open or door closed?"',
   },
 ];
+
+// Other cast
+
+// Roland Schitt, roland.webp
+// Jocelyn Schitt, jocelyn.jpeg
+// Twyla Sands, twyla.jpeg
+// Ronnie Lee, ronnie.jpeg
+// Bob (and Gwen) Currie, bob.jpeg
+// Mutt Schitt, mutt.jpeg
+// Wendy Kurtz (Blouse Barn), wendy.jpeg
+// Jake, jake.jpeg
+// Emir, emir.webp
+// Herb Ertlinger, herb.jpeg
+// Ivan (the baker), ivan.webp
+// Gloria Gregson, gloria.jpeg
+// Tippy Bernstein, tippy.jpeg
+// Artie (Lexi's friend), artie.jpeg

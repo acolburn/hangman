@@ -11,11 +11,22 @@ function App() {
   });
   const [guessedLetters, setGuessedLetters] = useState([]);
   const [guessResults, setGuessResults] = useState({});
+  const [soundIndex, setSoundIndex] = useState(0); // To keep track of which 'ew' sound to play next
 
   // Static variables
   const row1 = "QWERTYUIOP".split("");
   const row2 = "ASDFGHJKL".split("");
   const row3 = "ZXCVBNM".split("");
+  const sounds = [
+    "ew1.mp3",
+    "ew3.mp3",
+    "ew2.mp3",
+    "ew4.mp3",
+    "ew5.mp3",
+    "ew6.mp3",
+    "ew7.mp3",
+    "ew8.mp3",
+  ];
 
   // Derived variables
   const wrongGuessesCount = guessedLetters.filter(
@@ -55,6 +66,14 @@ function App() {
       correctGuess = true;
     }
     setGuessResults({ ...guessResults, [letter]: correctGuess });
+    // Play 'ew' if guess is wrong
+    if (!correctGuess) {
+      const audio = new Audio(
+        sounds[soundIndex % sounds.length], // Cycle through the 'ew' sounds
+      );
+      audio.play();
+      setSoundIndex(soundIndex + 1); // Increment the sound index for the next wrong guess
+    }
   }
 
   function statusMsgHeading() {
