@@ -162,13 +162,13 @@ function App() {
         ))}
       </div>
       {/* Display Word Section  */}
-      <div className="flex justify-center space-x-3 mt-5 ">
+      <div className="flex justify-center space-x-2 mt-5 ">
         {secretWord.split("").map((letter, index) => (
           /* clsx is there so if player loses, unplayed letters in the word are displayed in red  */
           <div
             key={index}
             className={clsx(
-              "w-10 h-10 sm:w-12 sm:h-12 bg-slate-600 border-b-2 border-slate-300 text-lg sm:text-2xl flex items-center justify-center",
+              "w-9 h-9 sm:w-12 sm:h-12 bg-slate-600 border-b-2 border-slate-300 text-sm sm:text-2xl flex items-center justify-center",
               {
                 "text-red-400": isGameOver && !guessedLetters.includes(letter),
               },
