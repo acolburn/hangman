@@ -78,6 +78,9 @@ function App() {
 
   function statusMsgHeading() {
     if (isGameWon) {
+      // Play simply_the_best if game is won
+      const audio = new Audio("simply_the_best.mp3");
+      audio.play();
       return "You win! 🎉 ";
     }
     if (isGameLost) {
